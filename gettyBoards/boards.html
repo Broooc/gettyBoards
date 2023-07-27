@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="stytle.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Boards</title>
+</head>
+<body>
+  <div class="manage">
+    <a id="logo" href="web.html">
+      <img src="public/images/logo.svg">
+    </a>
+    <div class="line-vertical"></div>
+    <a id="my_boards" href="boards.html">My boards</a>
+    <a href="#signUp" class="btn-sign-up">Sign up</a>
+    <a href="#signIn" class="btn-sign-in">Sign in</a>
+  </div>
+  <div id="line-horizontal"></div> 
+  <div class="all" id="signUp">
+    <a href="##" class="popup-close"></a>
+    <div class="sign-up-popup">
+      <form action="POST">
+      <div class="register-box">
+        <h2>Get started</h2>
+        <p style="color:grey; margin: 59px 0 0 0;">Email</p>
+        <div class="search-box-3">
+          <input class="input-2" type="email" autocomplete="on" required strip pattern="[a-z0-5]{8,}">
+        </div>
+        <p style="color:grey; margin: 10px 0 0 0;">Password</p>
+        <div class="search-box-3">
+          <input class="input-2" type="password" required strip>
+        </div>
+        <p style="color:grey; margin: 10px 0 0 0;">Confirm Password</p>
+        <div class="search-box-3" style="margin-bottom:30px;">
+          <input class="input-2" type="password" required strip pattern="[a-z0-5]{8,}">
+        </div>
+        <div class="btn-confirm">Sign up</div>
+      </div> 
+      </form> 
+    </div>
+  </div>
+  <div class="all" id="signIn">
+    <a href="##" class="popup-close"></a>
+    <div class="sign-in-popup">
+      <form action="POST">
+      <div class="register-box">
+        <h2>Welcome back</h2>
+        <p style="color:grey; margin: 59px 0 0 0;">Email</p>
+        <div class="search-box-3">
+          <input class="input-2" type="email" autocomplete="on" required strip>
+        </div>
+        <p style="color:grey; margin: 10px 0 0 0;">Password</p>
+        <div class="search-box-3">
+          <input class="input-2" type="password" required strip pattern="[a-z0-5]{8,}">
+        </div>
+        <a href="#forgot" style="color: var(--blue-2, #2D9CDB);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;"
+        >Forgot password?</a>
+        <div class="btn-confirm">Sign in</div>
+      </div> 
+      </form> 
+    </div>
+  </div> 
+  <div class="all" id="forgot">
+    <a href="##" class="popup-close"></a>
+    <div class="forgot-pass-popup">
+      <form action="POST">
+        <div class="register-box">
+          <h2>Restore password</h2>
+          <p style="color:grey; margin: 59px 0 0 0;">Email</p>
+          <div class="search-box-3">
+            <input class="input-2" type="email" autocomplete="on" required strip>
+          </div>
+          <div class="btn-confirm" style="margin-top: 30px;">Restore password</div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="Boards-cont">
+    <div class="Boards-list">
+      <div class="rect-cont">
+        <div class="rect">
+          <a href="find.html" class="plus">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+          </a>
+        </div>
+        <p>Create New Moodboard</p>
+      </div>  
+      <div class="rect-cont">
+        <div class="dropdown" id="drop">
+          <p style="margin-top:20px;">Save as</p>
+          <p>Dublicate</p>
+          <p>Rename</p>
+          <p>Delete</p>
+          <p>Share</p>
+        </div>
+        <div class="rect">
+          <a class="more-vertical" href="#drop">
+            <div></div>
+            <div></div>
+            <div></div>
+          </a>
+          <div class="grid">
+            <img src="public/images/rectangle-308.png">
+            <img src="public/images/rectangle-310.png">
+            <img src="public/images/rectangle-311.png">
+            <img src="public/images/rectangle-312.png">
+            <img src="public/images/rectangle-309.png">
+            <img src="public/images/rectangle-313.png">
+          </div>  
+        </div> 
+      <p>Untitled board</p>
+    </div>
+  </div>  
+</body>
+</html>

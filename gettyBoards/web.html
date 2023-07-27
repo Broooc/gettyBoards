@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stytle.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>gettyBoards</title>
+</head>
+  <div class="all" id="filters">
+    <a href="##" class="popup-close"></a>
+    <div class="side-window">
+      <div class="manage">
+        <h2 style="margin-top: auto; padding: 15px 0;">FILTERS</h2>
+        <a href="##" class="side-window-close">
+          <img src="public/images/close-icon.svg">
+        </a>
+      </div>
+      <form method="post">
+        <h2 class="search-categories">Grid size</h2>
+        <div class="min-block">
+          <fieldset>
+            <label class="container">
+              <input type="radio" class="check-highload" name="grid-size">
+              <span class="highload2">6</span>
+            </label>
+            <label class="container">
+              <input type="radio" class="check-highload" name="grid-size">
+              <span class="highload2">9</span>
+            </label>
+            <label class="container">
+              <input type="radio" class="check-highload" name="grid-size">
+              <span class="highload2">12</span>
+            </label>
+            <label class="container">
+              <input type="radio" class="check-highload" name="grid-size">
+              <span class="highload2">15</span>
+            </label>
+            <label class="container">
+              <input type="radio" class="check-highload" name="grid-size">
+              <span class="highload2">20</span>
+            </label>
+          </fieldset>
+        </div>
+        <h2 class="search-categories">Page position</h2>
+        <fieldset>
+          <div class="min-block-2">
+            <label class="page-pos">
+              <input type="radio" class="rect-highload" name="page">
+              <div class="rectangle0"></div>
+            </label>
+            <label class="page-pos">
+              <input type="radio" class="rect-highload" name="page">
+              <div class="rectangle1"></div>
+            </label>
+            <label class="page-pos">
+              <input type="radio" class="rect-highload" name="page">
+              <div class="rectangle2"></div>
+            </label>
+          </div>
+        </fieldset>
+        <h2 class="search-categories">Colors</h2>
+        <fieldset>
+          <div class="colors">
+            <div class="color-selector" style="background:#6FCF97;"></div>
+            <div class="color-selector" style="background:#27AE60;"></div>
+            <div class="color-selector" style="background:#F2C94C;"></div>
+            <div class="color-selector" style="background:#F2994A;"></div>
+            <div class="color-selector" style="background:#EB5757;"></div>
+            <div class="color-selector" style="background:#EB5757;"></div>
+            <div class="color-selector" style="background:#BB6BD9;"></div>
+            <div class="color-selector" style="background:#9B51E0;"></div>
+            <div class="color-selector" style="background:#56CCF2;"></div>
+            <div class="color-selector" style="background:#BB6BD9;"></div>
+            <div class="color-selector" style="background:#9B51E0;"></div>
+            <div class="color-selector" style="background:#56CCF2;"></div>
+          </div>
+        </fieldset>
+        <h2 class="search-categories">People</h2>
+        <fieldset>
+          <div class="other-selectors">
+            <label class="container">
+              <input type="radio" class="check-highload" name="people">
+              <span class="highload2"></span>
+            </label>
+            <p>No people</p>
+            <label class="container">
+              <input type="radio" class="check-highload" name="people">
+              <span class="highload2"></span>
+            </label>
+            <p>One person</p>
+            <label class="container">
+              <input type="radio" class="check-highload" name="people">
+              <span class="highload2"></span>
+            </label>
+            <p>Two people</p>
+            <label class="container">
+              <input type="radio" class="check-highload" name="people">
+              <span class="highload2"></span>
+            </label>
+            <p>Group of people</p>
+          </div>
+        </fieldset>
+        <h2 class="search-categories">Image style</h2>
+        <fieldset>
+          <div class="other-selectors">
+            <label class="container">
+              <input type="radio" class="check-highload" name="image">
+              <span class="highload2"></span>
+            </label>
+            <p>Abstract</p>
+            <label class="container">
+              <input type="radio" class="check-highload" name="image">
+              <span class="highload2"></span>
+            </label>
+            <p>Concept</p>
+            <label class="container">
+              <input type="radio" class="check-highload" name="image">
+              <span class="highload2"></span>
+            </label>
+            <p>Graphic</p>
+            <label class="container">
+              <input type="radio" class="check-highload" name="image">
+              <span class="highload2"></span>
+            </label>
+            <p>Texture</p>
+            <label class="container">
+              <input type="radio" class="check-highload" name="image">
+              <span class="highload2"></span>
+            </label>
+            <p>Background</p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <header class="manage">
+    <a id="logo" href="web.html">
+      <img src="public/images/logo.svg">
+    </a>
+    <div class="line-vertical"></div>
+    <a id="my_boards" href="boards.html">My boards</a>
+    <a href="#signUp" class="btn-sign-up">Sign up</a>
+    <a href="#signIn" class="btn-sign-in">Sign in</a>
+  </header>
+  <div class="all" id="signUp">
+    <a href="##" class="popup-close"></a>
+    <div class="sign-up-popup">
+      <form action="POST">
+      <div class="register-box">
+        <h2>Get started</h2>
+        <p style="color:grey; margin: 59px 0 0 0;">Email</p>
+        <div class="search-box-3">
+          <input class="input-2" type="email" autocomplete="on" required strip>
+        </div>
+        <p style="color:grey; margin: 10px 0 0 0;">Password</p>
+        <div class="search-box-3">
+          <input class="input-2" type="password" required strip pattern="[a-z0-5]{8,}">
+        </div> 
+        <p style="color:grey; margin: 10px 0 0 0;">Confirm Password</p>
+        <div class="search-box-3" style="margin-bottom:30px;">
+          <input class="input-2" type="password" required pattern="[a-z0-5]{8,}" strip>
+        </div>
+        <div class="btn-confirm" style="margin-top: 45px;">Sign up</div>
+      </div> 
+      </form> 
+    </div>
+  </div>
+  <div class="all" id="signIn">
+    <a href="##" class="popup-close"></a>
+    <div class="sign-in-popup">
+      <form action="POST">
+      <div class="register-box">
+        <h2>Welcome back</h2>
+        <p style="color:grey; margin: 59px 0 0 0;">Email</p>
+        <div class="search-box-3">
+          <input class="input-2" type="email" autocomplete="on" required strip>
+        </div>
+        <p style="color:grey; margin: 10px 0 0 0;">Password</p>
+        <div class="search-box-3">
+          <input class="input-2" type="password" required strip pattern="[a-z0-5]{8,}">
+        </div>
+        <a href="#forgot" style="color: var(--blue-2, #2D9CDB);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;"
+        >Forgot password?</a>
+        <div class="btn-confirm" style="margin-top: 30px;">Sign in</div>
+      </div> 
+      </form> 
+    </div>
+  </div>
+  <div class="all" id="forgot">
+    <a href="##" class="popup-close"></a>
+    <div class="forgot-pass-popup">
+      <form action="POST">
+        <div class="register-box">
+          <h2>Restore password</h2>
+          <p style="color:grey; margin: 59px 0 0 0;">Email</p>
+          <div class="search-box-3">
+            <input class="input-2" type="email" autocomplete="on" required strip>
+          </div>
+          <div class="btn-confirm" style="margin-top: 30px;">Restore password</div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="title" style="display:block">Create mood board in minutes!</div>
+  <div id="sub-title" style="display:block">Search, group and preview getty images in one place! Up to 60% more performing search!</div>
+  <div class="block">
+  <div class="search-box">
+    <a href="find.html">
+      <img src="public/images/search.svg" class="img-search">
+    </a>
+    <input class="input-1" type="text" placeholder="Search (enter keywords)" autocomplete="on">
+  </div>
+    <a href="#filters" class="sliders" style="margin-left: 11px;">
+      <img src="public/images/sliders.svg" class="img-sliders">
+    </a>    
+  </div>
+  <div class="text-box">
+    <p onclick="search_keyword(this)">interiors</p>
+    <p onclick="search_keyword(this)">architecture</p>
+    <p onclick="search_keyword(this)">products</p>
+    <p onclick="search_keyword(this)">materials</p>
+    <p onclick="search_keyword(this)">photography</p>
+    <p onclick="search_keyword(this)">abstract graphics</p>
+    <p onclick="search_keyword(this)">pattern</p>
+  </div> 
+  <!-- triple image row-->
+  <figure>
+    <div class="post-image"><img src="https://unsplash.it/375/250/?random"/></div>
+    <div class="post-image"><img src="https://unsplash.it/396/264/?random"/></div>
+    <div class="post-image"><img src="https://unsplash.it/399/266/?random"/></div>
+  </figure>
+  <!-- single image row-->
+  <figure>
+    <div class="post-image"><img src="https://unsplash.it/380/252/?random"/></div>
+    <div class="post-image"><img src="https://unsplash.it/392/260/?random"/></div>
+    <div class="post-image"><img src="https://unsplash.it/400/265/?random"/></div>
+  </figure>
+  <!-- double image row-->
+  <figure>
+    <div class="post-image"><img src="https://unsplash.it/400/300/?random"/></div>
+    <div class="post-image"><img src="https://unsplash.it/800/600/?random"/></div>
+    <div class="post-image"><img src="https://unsplash.it/799/600/?random"/></div>
+  </figure>
+  <script src="script.js"></script>
+</body>
+</html>
