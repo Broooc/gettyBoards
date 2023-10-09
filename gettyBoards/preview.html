@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="stytle.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview</title>
+  <link href="stytle.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <title>Boards</title>
 </head>
-<body>
+<body style="visibility: visible;">
+  <div class="img-preview">
+    <div onclick="close_preview()" class="close-preview">
+      <img src="public/images/white-close-icon.svg">
+    </div>
+    <div class="change-image-zone">
+      <a class="change-img-right">
+        <img src="public/images/arrow-right-preview.svg">
+      </a>
+      <img class="preview-image" style="width: 40%;">
+      <a class="change-img-left">
+        <img src="public/images/arrow-left-preview.svg">
+      </a>
+    </div>
+  </div>  
   <div class="manage">
     <a id="logo" href="web.html">
       <img src="public/images/logo.svg">
     </a>
     <a id="my_boards" href="boards.html">My boards</a>
+    <div class="arrow-box">
+      <img src="public/images/arrow-right.svg">
+    </div>
+    <div id="Untitled_board">Untitled board</div>
     <a href="#signUp" class="btn-sign-up">Sign up</a>
     <a href="#signIn" class="btn-sign-in">Sign in</a>
   </div>
@@ -80,45 +98,43 @@
       </form>
     </div>
   </div>
-  <div class="Boards-cont">
-    <div class="Boards-list">
-      <div class="rect-cont">
-        <div class="rect">
-          <a href="find.html" class="plus">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-          </a>
-        </div>
-        <p>Create New Moodboard</p>
-      </div>  
-      <div class="rect-cont">
-        <div class="rect">
-          <div class="hover-zone">
-            <div class="more-vertical">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="dropdown">
-              <p style="margin-top:20px;">Save as</p>
-              <p>Dublicate</p>
-              <p>Rename</p>
-              <p>Delete</p>
-              <p>Share</p>
-            </div>
-          </div>
-          <a class="grid" href="preview.html">
-            <img src="public/images/rectangle-15.png" style="width:76px; height: 67px;">
-            <img src="public/images/rectangle-7.png" style="width:62px; height: 67px;">
-            <img src="public/images/rectangle-26.png" style="width:99px; height: 67px;">
-            <img src="public/images/rectangle-25.png" style="width:76px; height: 51px;">
-            <img src="public/images/rectangle-4.png" style="width:62px; height: 51px;">
-            <img src="public/images/rectangle-13.png" style="width:99px; height: 51px;">
-          </a>  
-        </div> 
-      <p>Untitled board</p>
+  
+  <div class="Board">
+    <a class="escape" href="find.html">
+      <img src="public/images/arrow-left-escape.svg">
+    </a>
+    <h1>Untitled board</h1>
+    <div class="panel-board">
+      <div class="point-01">
+        <img src="public/images/edit.svg" style="margin: 0 12px;">
+        Edit
+      </div>
+      <div class="point">
+        <img src="public/images/save.svg" style="margin: 0px 12px;">
+        Save as
+      </div>
+      <div class="point">
+        <img src="public/images/export.svg" style="margin: 0px 12px;">
+        Export
+      </div>
+      <div class="point">
+        <img src="public/images/download.svg" style="margin: 0px 12px;">
+        Download
+      </div>
+      <div class="point">
+        <img src="public/images/trash.svg" style="margin: 0px 12px;">
+        Delete
+      </div>
     </div>
-  </div> 
-  <script src="script.js"></script>
+  </div>
+  <div class="preview-grid">
+      <img src="public/images/rectangle-15.png" onclick="search_src(this)" class="switch">
+      <img src="public/images/rectangle-7.png" onclick="search_src(this)" class="switch">
+      <img src="public/images/rectangle-26.png" onclick="search_src(this)" class="switch">
+      <img src="public/images/rectangle-25.png" onclick="search_src(this)" class="switch">
+      <img src="public/images/rectangle-4.png" onclick="search_src(this)" class="switch">  
+      <img src="public/images/rectangle-13.png" onclick="search_src(this)" class="switch">
+  </div>
+  <script src="script.js"></script> 
 </body>
 </html>

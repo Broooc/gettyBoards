@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stytle.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +18,11 @@
           <img src="public/images/close-icon.svg">
         </a>
       </div>
-      <form method="post"></form>
         <h2 class="search-categories">Grid size</h2>
         <div class="min-block">
           <fieldset>
             <label class="container">
-              <input type="radio" class="check-highload" name="grid-size">
+              <input type="radio" class="check-highload" name="grid-size" checked>
               <span class="highload2">6</span>
             </label>
             <label class="container">
@@ -48,7 +47,7 @@
         <fieldset>
           <div class="min-block-2">
             <label class="page-pos">
-              <input type="radio" class="rect-highload" name="page">
+              <input type="radio" class="rect-highload" name="page" checked>
               <div class="rectangle0"></div>
             </label>
             <label class="page-pos">
@@ -131,7 +130,6 @@
             <p>Background</p>
           </div>
         </fieldset>
-      </form>
     </div>
   </div>
   <div class="manage">
@@ -214,10 +212,10 @@
   <div class="Board">
     <h1>Untitled board</h1>
     <div class="panel-board">
-      <div class="point-0">
+      <a class="point-0" href="preview.html">
         <img src="public/images/eye.svg" style="margin: 0 4px 0 0;">
         <p style="height: 32px;">Preview</p>
-      </div>
+      </a>
       <div class="point">
         <img src="public/images/save.svg" style="margin: 0px 12px;">
         Save as
@@ -241,9 +239,13 @@
     <div class="show-style">
       <div class="sliders">
         <img src="public/images/grid.svg" class="img-sliders">
+        <input type="radio" class="check-grid-type" name="grid-type">
+        <a href="find.html"></a>
       </div>
       <div class="sliders" style="margin-left: 11px;">
         <img src="public/images/sidebar.svg" class="img-sliders">
+        <input type="radio" class="check-grid-type" name="grid-type">
+        <a href="side-grid.html" class="select"></a>
       </div>
     </div>
 </div>
