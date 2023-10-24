@@ -32,11 +32,11 @@
       <img src="public/images/arrow-right.svg">
     </div>
     <div id="Untitled_board">Untitled board</div>
-    <a href="#signUp" class="btn-sign-up">Sign up</a>
-    <a href="#signIn" class="btn-sign-in">Sign in</a>
+    <a onclick="signUp_popup_open()" class="btn-sign-up">Sign up</a>
+    <a onclick="signIn_popup_open()" class="btn-sign-in">Sign in</a>
   </div>
   <div class="all" id="signUp">
-    <a href="##" class="popup-close"></a>
+    <a onclick="signUp_popup_open()" class="popup-close"></a>
     <div class="sign-up-popup">
       <form action="POST">
       <div class="register-box">
@@ -59,7 +59,7 @@
     </div>
   </div>
   <div class="all" id="signIn">
-    <a href="##" class="popup-close"></a>
+    <a onclick="signIn_popup_open()" class="popup-close"></a>
     <div class="sign-in-popup">
       <form action="POST">
       <div class="register-box">
@@ -72,7 +72,7 @@
         <div class="search-box-3">
           <input class="input-2" type="password" required strip pattern="[a-z0-5]{8,}">
         </div>
-        <a href="#forgot" style="color: var(--blue-2, #2D9CDB);
+        <a onclick="forgotPass_popup_open()" style="color: var(--blue-2, #2D9CDB);
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
@@ -84,7 +84,7 @@
     </div>
   </div> 
   <div class="all" id="forgot">
-    <a href="##" class="popup-close"></a>
+    <a onclick="forgotPass_popup_open()" class="popup-close"></a>
     <div class="forgot-pass-popup">
       <form action="POST">
         <div class="register-box">

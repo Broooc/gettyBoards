@@ -4,6 +4,11 @@
     align-items: center;
     text-align: center;
     border-bottom: 0.5px solid rgba(224, 224, 224, 1);
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    width: 100vw;
+    z-index: 99;
 }
 
 body {
@@ -51,6 +56,8 @@ body {
     border-radius: 0.3em;
     text-decoration: none;
     margin-left: auto;
+    position: fixed;
+    right: 146px;
 }
 
 .btn-sign-in {
@@ -65,6 +72,8 @@ body {
     border-radius: 0.3em;
     color: rgb(161, 157, 157);
     text-decoration: none;
+    position: fixed;
+    right: 0;
 }
 
 .btn-sign-up:hover {
@@ -91,7 +100,15 @@ body {
     left:0;
     display: flex;
     justify-content: center;
-}  
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms;
+}
+
+.sign-up-popup:active {
+    visibility: visible;
+    opacity: 1;
+}
 
 .sign-in-popup {
     width: 413px;
@@ -105,7 +122,15 @@ body {
     left:0;
     display: flex;
     justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms;
 }  
+
+.sign-in-popup:active {
+    visibility: visible;
+    opacity: 1;
+}
 
 .forgot-pass-popup {
     width: 413px;
@@ -119,6 +144,14 @@ body {
     left:0;
     display: flex;
     justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms;
+}
+
+.forgot-pass-popup:active {
+    visibility: visible;
+    opacity: 1;
 }
 
 .popup-close {
@@ -131,7 +164,7 @@ body {
 
 .all {
     position:fixed;
-    z-index: 5;
+    z-index: 300;
     display:flex;
     align-items:center;
     justify-content: center;
@@ -144,6 +177,7 @@ body {
     overflow: cover;
     opacity: 0;
     visibility: hidden;
+    transition: 300ms;
 }
 
 .all:target {
@@ -364,6 +398,14 @@ figure {
     right: 0;
     overflow-y: auto;
     overflow-x: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms;
+}
+
+.side-window:active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .side-window p {
@@ -547,6 +589,7 @@ figure {
     align-items: center;
     margin: 17px 80px 0px 80px;
     min-width: fit-content;
+    margin-top: 40px;
 }
 
 .Board h1 {
@@ -601,12 +644,7 @@ figure {
     margin-left:auto;
 }
 
-.show-style .check-grid-type {
-    position: absolute;
-    opacity: 0;
-}
-
-.show-style .sliders {
+.show-style-sliders-1, .show-style-sliders-2 {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -620,20 +658,10 @@ figure {
     margin-top: auto;
 }
 
-.show-style .check-grid-type:checked ~ .sliders {
+.sa {
     border: 2px solid var(--green-2, #27AE60);
     width: 48px;
     height: 48px;
-}
-
-.show-style .sliders:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.show-style .check-grid-type:checked ~ .sliders:after {
-    display: block;
 }
 
 .arrow-box {
@@ -661,7 +689,7 @@ figure {
     height: 323px;
     flex-shrink: 0;
     justify-content:center;
-    margin: 0 80px  auto;
+    margin: 0 80px;
     border-radius: 5px;
     border: 1px solid var(--gray-5, #E0E0E0);
     background: #FAFAFA;
@@ -670,6 +698,49 @@ figure {
     align-items: center;
 }
 
+.select-block {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.select-block.active {
+    display: grid;
+    grid-template-columns: 16fr 10fr;
+}
+
+.selected-images {
+    width: 453px;
+    height: 288px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid var(--Gray-5, #E0E0E0);
+    background: #FAFAFA;
+    color: #BDBDBD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-image-block {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.select-image-block h2 {
+    color: var(--Gray-2, #4F4F4F);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 12px;
+    margin-top: -5px;
+}
+
+.select-image-block.active {
+    visibility: visible;
+    opacity: 1;
+}
 
 /*--------------------------*/
        /*Boards Page*/
@@ -688,6 +759,7 @@ figure {
 .Boards-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 40px;
 }
 
 .rect-cont p {
@@ -834,7 +906,7 @@ figure {
 
 .img-preview {
     position:fixed;
-    z-index: 5;
+    z-index: 500;
     display:flex;
     align-items:center;
     justify-content: center;

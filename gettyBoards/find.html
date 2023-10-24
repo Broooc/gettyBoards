@@ -10,11 +10,11 @@
 </head>
 <body>
   <div class="all" id="filters">
-    <a href="##" class="popup-close"></a>
+    <a onclick="filters_open()" class="popup-close"></a>
     <div class="side-window">
       <div class="manage">
         <h2 style="margin-top: auto; padding: 15px 0;">FILTERS</h2>
-        <a href="##" class="side-window-close">
+        <a onclick="filters_open()" class="side-window-close">
           <img src="public/images/close-icon.svg">
         </a>
       </div>
@@ -142,12 +142,12 @@
     <img src="public/images/arrow-right.svg">
   </div>
   <div id="Untitled_board">Untitled board</div>
-  <a href="#signUp" class="btn-sign-up">Sign up</a>
-  <a href="#signIn" class="btn-sign-in">Sign in</a>
+  <a onclick="signUp_popup_open()" class="btn-sign-up">Sign up</a>
+  <a onclick="signIn_popup_open()" class="btn-sign-in">Sign in</a>
   </div>
   <div id="line-horizontal"></div>
   <div class="all" id="signUp">
-    <a href="##" class="popup-close"></a>
+    <a onclick="signUp_popup_open()" class="popup-close"></a>
     <div class="sign-up-popup">
       <form action="POST">
       <div class="register-box">
@@ -170,7 +170,7 @@
     </div>
   </div>
   <div class="all" id="signIn">
-    <a href="##" class="popup-close"></a>
+    <a onclick="signIn_popup_open()" class="popup-close"></a>
     <div class="sign-in-popup">
       <form action="POST">
       <div class="register-box">
@@ -183,7 +183,7 @@
         <div class="search-box-3">
           <input class="input-2" type="password" required strip pattern="[a-z0-5]{8,}">
         </div>
-        <a href="#forgot" style="color: var(--blue-2, #2D9CDB);
+        <a onclick="forgotPass_popup_open()" style="color: var(--blue-2, #2D9CDB);
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
@@ -195,7 +195,7 @@
     </div>
   </div>
   <div class="all" id="forgot">
-    <a href="##" class="popup-close"></a>
+    <a onclick="forgotPass_popup_open()" class="popup-close"></a>
     <div class="forgot-pass-popup">
       <form action="POST">
         <div class="register-box">
@@ -233,19 +233,15 @@
     </a>
     <input class="input-1" type="text" placeholder="Search (enter keywords)" autocomplete="on">
   </div>
-    <a class="sliders" href="#filters" style="margin: 0 11px 0 11px;">
+    <a class="sliders" onclick="filters_open()" style="margin: 0 11px 0 11px;">
       <img src="public/images/sliders.svg" class="img-sliders">
     </a>
     <div class="show-style">
-      <div class="sliders">
+      <div class="show-style-sliders-1 sa" onclick="change_view_1()">
         <img src="public/images/grid.svg" class="img-sliders">
-        <input type="radio" class="check-grid-type" name="grid-type">
-        <a href="find.html"></a>
       </div>
-      <div class="sliders" style="margin-left: 11px;">
+      <div class="show-style-sliders-2" style="margin-left: 11px;" onclick="change_view_2()">
         <img src="public/images/sidebar.svg" class="img-sliders">
-        <input type="radio" class="check-grid-type" name="grid-type">
-        <a href="side-grid.html" class="select"></a>
       </div>
     </div>
 </div>
@@ -258,8 +254,17 @@
     <p onclick="search_keyword(this)">abstract graphics</p>
     <p onclick="search_keyword(this)">pattern</p>
   </div> 
-  <div id="enter-field">
-    <p style="width:230px; text-align:center;">Enter your first search request to start creating a mood board</p>
+  <div class="select-block">
+    <div id="enter-field">
+      <p style="width:230px; text-align:center;">Enter your first search request to start creating a mood board</p>
+    </div>
+    <div class="select-image-block">
+      <h2>Selected pictures</h2>
+      <div class="selected-images">
+        <p style="width:230px; text-align:center;">Drag and Drop pictures here,
+          or click “add button” at picture list to add pictures</p>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
