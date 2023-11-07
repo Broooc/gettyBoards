@@ -725,6 +725,7 @@ figure {
 .select-image-block {
     visibility: hidden;
     opacity: 0;
+    margin-left: 45px;
 }
 
 .select-image-block h2 {
