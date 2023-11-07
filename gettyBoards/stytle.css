@@ -689,7 +689,7 @@ figure {
     height: 323px;
     flex-shrink: 0;
     justify-content:center;
-    margin: 0 80px;
+    margin: 0;
     border-radius: 5px;
     border: 1px solid var(--gray-5, #E0E0E0);
     background: #FAFAFA;
@@ -701,6 +701,7 @@ figure {
 .select-block {
     display: grid;
     grid-template-columns: 1fr;
+    margin: 0 80px;
 }
 
 .select-block.active {
