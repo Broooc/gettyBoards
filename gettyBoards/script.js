@@ -9,44 +9,49 @@ function search_keyword(element) {
     }
 }
 
-function search_src(element) {
-    console.log(element);
-    element.classList.toggle("active");
+
+allImages = document.querySelectorAll(".switch");
+let index = 0;
+allImages.forEach(i => {
+    index++;
+    i.id = index;
+});
+
+function search_src(element){
+    img = document.querySelector(".preview-image");
+    img.src = element.src;
+    elementId = element.id;
     imgClass = document.querySelector(".img-preview");
     imgClass.classList.toggle("active");
-    miui = document.querySelector(".switch.active");
-    miuiSrc = miui.src;
-    img = document.querySelector(".preview-image");
-    img.src = miuiSrc;
-    console.log(miui);
-    right = document.querySelector(".change-img-right");
-    left = document.querySelector(".change-img-left");
-    right.addEventListener("click", function(){
-        miui = document.querySelector(".switch.active");
-        elnext = miui.nextElementSibling;
-        miuiSrc = miui.src;
-        img.src = miuiSrc;
-        miui.classList.toggle("active");
-        elnext.classList.toggle("active");
-        elprev.classList.toggle("active");
-    })
-    left.addEventListener("click", function(){
-        miui = document.querySelector(".switch.active");
-        elprev = miui.previousElementSibling;
-        miuiSrc = miui.src;
-        img.src = miuiSrc;
-        miui.classList.toggle("active");
-        elprev.classList.toggle("active");
-        elnext.classList.toggle("active");
-    })
-}
+};
 
-var parent = document.querySelector(".change-image-zone");
-var child = document.querySelector(".image-preview");
+right = document.querySelector(".change-img-right");
+left = document.querySelector(".change-img-left");
 
-var cHeight = child.offsetHeight;
+let parent = document.querySelector(".change-image-zone");
 
-parent.style.height = cHeight;
+
+right.addEventListener("click", function(){
+    if (elementId == index) {
+        
+    } else {
+        elementId++
+        next = document.getElementById(elementId);
+        img.src = next.src
+    }
+});
+
+left.addEventListener("click", function(){
+    if (elementId == 1) {
+        
+    } else {
+        elementId--
+        prev = document.getElementById(elementId);
+        img.src = prev.src
+    }
+});
+
+
 
 function close_preview() {
     let preview = document.querySelector(".img-preview");
@@ -106,23 +111,3 @@ function change_view_2() {
     let imgSelect = document.querySelector(".select-image-block");
     imgSelect.classList.toggle("active");
 }
-
-//function search_src(element) {
-//    var src0 = element.src;
-//    console.log(element);
-//    let preview = document.querySelector(".img-preview");
-//    preview.classList.toggle("active");
-//    document.querySelector(".preview-image").src = src0;
-//    right = document.querySelector(".change-img-right");
-//   left = document.querySelector(".change-img-left");
-//    right.addEventListener("click", function(){
-//        elnext = element.nextElementSibling;
-//        elRight = elnext.src;
-//        document.querySelector(".preview-image").src = elRight;
-//    })
-//   left.addEventListener("click", function(){
-//        elprev = element.previousElementSibling;
-//        elLeft = elprev.src;
-//        document.querySelector(".preview-image").src = elLeft;
-//    })
-//}

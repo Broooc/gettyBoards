@@ -11,6 +11,11 @@
     z-index: 99;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -909,7 +914,7 @@ figure {
 
 .img-preview {
     position:fixed;
-    z-index: 500;
+    z-index: 200;
     display:flex;
     align-items:center;
     justify-content: center;
@@ -954,33 +959,123 @@ figure {
 }
 
 .preview-image {
-    margin: 0;
+    margin: auto;
     opacity: 1;
-    width: 120%;
+    width: 100%;
+    z-index: 100;
 }
 
 .change-image-zone {
     background-color: rgba(176, 176, 176, 0.2);
-    width: 100vw;
-    align-items:center;
-    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
     justify-content: center;
+    overflow: auto;
 }
 
 .change-img-left {
     cursor: pointer;
-    position:absolute;
-    top: 50%;
-    width:auto;
+    align-items:center;
+    justify-content: center;
     border-radius: 0 3px 3px 0;
     left: 0;
+    display: flex;
+    overflow: auto;
+    height: 100%;
 }  
+
+.change-img-left img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    margin: 0 auto;
+}
 
 .change-img-right {
     cursor: pointer;
-    position:absolute;
-    top: 50%;
-    width:auto;
     right: 0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
     border-radius: 3px 0 0 3px;
+    overflow: auto;
+    height: 100%;
+}
+
+.change-img-right img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.find-similar {
+    width: 148px;
+    height: 34px;
+    background: #000;
+    border-radius: 50px;
+    left: auto;
+    display: flex;
+    margin-top: -2.5rem;
+    margin-left: 13rem;
+    margin-right: 0.3rem;
+    z-index: 120;
+    color: white;
+    vertical-align: middle;
+}
+
+.find-similar p{
+    height: 2px;
+    line-height: 2px;
+    margin-left: 6px;
+}
+
+.add-to-moodboard {
+    width: 195px;
+    height: 34px;
+    background: #000;
+    border-radius: 50px;
+    left: auto;
+    display: flex;
+    margin-top: -2.5rem;
+    margin-left: 0.3rem;
+    z-index: 120;
+    color: white;
+    vertical-align: middle;
+}
+
+.add-to-moodboard p{
+    height: 2px;
+    line-height: 2px;
+    margin-left: 6px;
+}
+
+.white-icon {
+    background-color: white;
+    height: 34px;
+    width: 34px;
+    position: relative;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-line {
+    height: 20px;
+    width: 2.5px;
+    background-color: #000;
+    border-radius: 50px;
+}
+
+.small-line-hor {
+    height: 2.5px;
+    width: 20px;
+    background-color: #000;
+    border-radius: 50px;
+    position: absolute;
 }
